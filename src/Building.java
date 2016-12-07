@@ -7,9 +7,9 @@ public class Building {
 	
 	/**
 	 * Constructor for a Building object
-	 * @param x1
-	 * @param y
-	 * @param x2
+	 * @param x1, left abscissa of the rectangle
+	 * @param y, height of the rectangle
+	 * @param x2, right abscissa of the rectangle
 	 */
 	public Building(double x1, double y, double x2) {
 		this.x1 = x1;
@@ -17,6 +17,4 @@ public class Building {
 		this.x2 = x2;
 	}
 	
-	
-
 }
