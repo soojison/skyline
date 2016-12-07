@@ -23,6 +23,7 @@ public class SkyLineTest {
 		in.add(b1);
 		in.add(b2);
 		in.add(b3);
+		in.add(b4);
 		ret = SkyLine.skyLine(in);
 		assertTrue(ret.size() % 2 != 0);
 	}
