@@ -35,8 +35,10 @@ public class SkyLine {
 		ArrayList<Double> ret = new ArrayList<Double>();
 		PriorityQueue<Double> q = new PriorityQueue<Double>();
 	
-		// iterate over all the edges
-		for(Edge currentEdge : edges) { // O(2n) => O(n)
+		// iterate over all the edges. For every building, there are two edges, so
+		// in terms of the number of rectangles in the input, the loop is
+		// O(2n), which simplifies to O(n)
+		for(Edge currentEdge : edges) {
 			// the current edge is the left edge
 			if(currentEdge.isLeft) { // going right
 				// either the edge occurs independently of other buildings
@@ -47,7 +49,7 @@ public class SkyLine {
 					ret.add(currentEdge.y);
 				}
 				// add the height of the edge to be compared later
-				q.add(currentEdge.y);
+				q.add(currentEdge.y); // Add takes O(log(n))
 			} else { // coming down
 				// the current edge is the right edge
 				// remove the the info about the "left edge"
